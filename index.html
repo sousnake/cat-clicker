@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+
+		<div class="col-md-8" style="padding-left:0em; padding-top:1em; float : left;">	
+			<div class="dropdown" style="margin-left:35%;">
+			  <button class="btn btn-default dropdown-toggle btn-info" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    Select Cat To Click
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" style="padding:1em;left:inherit" aria-labelledby="dropdownMenu1" id="cat-list">
+			  </ul>
+			</div>
+
+			<div id="cat" class="panel panel-info" style ="margin-top:20px;padding:10px;">
+				<div class="panel-heading text-center" style = "margin-bottom:20px; font-weight:bold">
+					<h2>
+						<span id="cat-name"></span>
+						<span id = "cat-count"></span>
+						<span id = "cat-title"></span>
+						<button id="resetCounter" class="btn btn-default btn-warning" type="button" style="margin-left:10px;"> 
+							Reset Clicks</button>
+					</h2>
+				</div>
+				<img id="cat-img" src="" class="img-responsive" style="margin:0px auto;"/>
+			    <div class='panel-footer' style = "margin-top:20px;font-weight:bold">
+				    <h3>Nicknames</h3>
+			        <ul id="cat-nicknames">
+			        </ul>
+		    	</div>
+		    </div>
+		</div>
+
+		<div id="admin" class ="col-md-4" style="padding:1em;">
+			<div  style="float:right;">
+				<button id = "showAdminPanel" class="btn btn-primary btn-warning" type="button" data-toggle="collapse" data-target="#newCatDetails" aria-controlsexpanded="false" aria-controls="newCatDetails">
+	  				Add A New Cat
+				</button>
+			</div>
+			<br><br>
+			<div class="collapse" id="newCatDetails" style="margin-top:13px;">
+		  		<div class="well">
+		    		<div>
+						<form class="form-horizontal">
+						  <div class="form-group">
+						    <label for="newCatName" class="col-sm-2 control-label">Name</label>
+						    <div class="col-sm-10">
+						      <input type="text" class="form-control" id="newCatName" placeholder="Name">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="newCatImgSrc" class="col-sm-2 control-label">Source</label>
+						    <div class="col-sm-10">
+						      <input type="text" class="form-control" id="newCatImgSrc" placeholder="Image Url">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="newCatNicknames" class="col-sm-2 control-label">Nicknames</label>
+						    <div class="col-sm-10">
+						      <input type="text" class="form-control" id="newCatNicknames" placeholder="Enter comma separated">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <button id ="saveCat" class="btn btn-primary btn-success" type="button"data-toggle="collapse" data-target="#newCatDetails" aria-controlsexpanded="false" aria-controls="newCatDetails">Save</button>
+						      <button id ="cancelCat" class="btn btn-primary btn-danger" type="button"data-toggle="collapse" data-target="#newCatDetails" aria-controlsexpanded="false" aria-controls="newCatDetails">Cancel</button>
+						    </div>
+						  </div>
+						</form>
+					</div>
+		  		</div>
+			</div>
+		</div>
+		<script src="js/app.js"></script>
+	</div>
+</body>
+</html>
